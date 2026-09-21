@@ -1,0 +1,118 @@
+/*
+  🧠 PROJECT: Positioning Lab — relative/absolute/fixed/sticky
+
+  ✅ TOPICS PRACTICED
+  - display: block vs inline vs none
+  - position: static / relative / absolute / fixed / sticky
+  - top / right / bottom / left
+  - overflow: visible / hidden / scroll / auto
+
+
+  🎯 GOAL: Learn how static/relative/absolute/fixed/sticky behave using visible UI pieces.
+*/
+
+/* STEP 1 — Base styling + ensure scroll exists */
+/*
+  Style body and .page (font, remove margin, max-width, padding).
+  Give .filler a big min-height so the page scrolls (if needed).
+  Scrolling is required to test sticky + fixed.
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #22577a;
+    color: #ced4da;
+}
+
+.filler {
+    min-height: 100vh;
+}
+
+.page {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 8px;
+    background-image: linear-gradient(to right, #355070, #ced4da);
+
+    border-radius: 24px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
+}
+
+/* STEP 2 — Sticky header */
+/*
+  Select .sticky-header and set position: sticky.
+  Set top: 0 so it sticks to the top when you scroll.
+  Add background + border so it looks like a real header.
+*/
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #ced4da;
+    color: #355070;
+    border: 2px solid #22577a;
+    margin-bottom: 24px;
+}
+
+/* STEP 3 — Make the card a relative positioning parent */
+/*
+  Select .relative-parent and set position: relative.
+  This does not move the card by itself.
+  It allows absolutely positioned children to use this card as their reference.
+*/
+
+.relative-parent {
+    position: relative;
+}
+
+/* STEP 4 — Place the badge with absolute positioning */
+/*
+  Select .badge and set position: absolute.
+  Use top and right to place it in the top-right corner of the card.
+  Example: top: 12px; right: 12px;
+  Add padding, border-radius, background, and color so it looks like a badge.
+*/
+
+.badge {
+    position: absolute;
+    top: 12px;
+    right: 24px;
+    color: #355070;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, #f8961e, #ede7e3);
+    padding: 14px 18px;
+    border-radius: 10px;
+}
+
+.badge:hover {
+    background-image: linear-gradient(to bottom, #ffd670, #fff5d0);
+}
+
+/* STEP 5 — Create a fixed floating button */
+/*
+  Select .chat-fab and set position: fixed.
+  Use bottom and right to pin it to the screen.
+  Example: bottom: 18px; right: 18px;
+  Add width/height, border-radius, and box-shadow.
+*/
+
+.chat-fab {
+    position: fixed;
+    bottom: 12px;
+    right: 24px;
+    width: 5%;
+    height: 4vh;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
+}
+
+/* STEP 6 — Reminder about static */
+/*
+  Static is the default position.
+  If an element is static, top/right/bottom/left do nothing.
+  Only relative/absolute/fixed/sticky respond to those offsets.
+*/
