@@ -1,0 +1,97 @@
+/*
+  🧠 PROJECT: Overflow Lab — hidden/scroll/auto
+
+  ✅ TOPICS PRACTICED
+  - display: block vs inline vs none
+  - position: static / relative / absolute / fixed / sticky
+  - top / right / bottom / left
+  - overflow: visible / hidden / scroll / auto
+
+  IMPORTANT 
+  - After each step: SAVE → REFRESH.
+
+  🎯 GOAL: Learn what overflow does when content is bigger than its container.
+*/
+
+/* STEP 1 — Layout so overflow is easy to see */
+/*
+  Style body and .page (font, remove margin, max-width, padding).
+  Make .row a responsive grid with gap.
+  Give .box a fixed height so overflow can happen.
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page {
+    max-width: 30%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.row {
+    display: grid;
+    gap: 36px;
+}
+
+.box {
+    height: 200px;
+    background-image: linear-gradient(to bottom, #98c1d9, #fffcf2);
+    padding: 12px;
+    border-radius: 18px;
+}
+
+.long-content {
+    white-space: nowrap;
+}
+
+/* STEP 2 — Base box styling */
+/*
+  Style .box with background, border, padding, border-radius.
+  Set height: 180px (or similar).
+  Style .long-content so it is one long line (hint: white-space: nowrap).
+*/
+
+
+/* STEP 3 — overflow: visible */
+/*
+  Select .box--visible and set overflow: visible.
+  Observe: content spills outside the box.
+*/
+
+.box--visible {
+    overflow: visible;
+}
+
+/* STEP 4 — overflow: hidden */
+/*
+  Select .box--hidden and set overflow: hidden.
+  Observe: content is cut off (clipped).
+*/
+
+.box--hidden {
+    overflow: hidden;
+}
+
+/* STEP 5 — overflow: scroll */
+/*
+  Select .box--scroll and set overflow: scroll.
+  Observe: scrollbars appear (even if always needed).
+*/
+
+.box--scroll {
+    overflow: scroll;
+}
+
+/* STEP 6 — overflow: auto */
+/*
+  Select .box--auto and set overflow: auto.
+  Observe: scrollbars appear only when necessary.
+*/
+
+.box--auto {
+    overflow: auto;
+}
