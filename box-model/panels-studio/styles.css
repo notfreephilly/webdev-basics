@@ -1,0 +1,87 @@
+/*
+  🧠 PROJECT: Panels Studio — box-sizing & box-shadow
+
+  ✅ TOPICS
+  - Box Model (content → padding → border → margin)
+  - width / height / padding
+  - border / margin
+  - box-sizing
+  - box-shadow
+
+  IMPORTANT 
+
+
+/* STEP 1 — Layout row (visual comparison) */
+/*
+  Style body + .page (font, remove margin, max-width, padding).
+  Make .row a responsive grid: 3 columns when there is space, otherwise stack.
+  Add gap so panels don't touch.
+*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.page {
+    max-width: 50%;
+    font-family: fantasy;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* STEP 2 — Give all panels the same base styling */
+/*
+  Select .panel: add background, border, border-radius, and padding.
+  This gives all panels the same starting point.
+*/
+
+.panel {
+    background: radial-gradient(circle at 100% 100%,
+            #a9927d 10%,
+            #eeeeee 70%);
+
+    border: 2px solid whitesmoke;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* STEP 3 — Show the problem (default sizing) */
+/*
+  On .panel--default, increase padding (example: 28px).
+  Notice: with default sizing, extra padding can make it feel larger.
+*/
+
+.panel--default {
+    padding: 32px;
+}
+
+/* STEP 4 — Fix with box-sizing: border-box */
+/*
+  On .panel--borderbox, set box-sizing: border-box.
+  Give it the same padding value as .panel--default.
+  Observe: it stays consistent because padding/border stay inside the width.
+*/
+
+.panel--borderbox {
+    box-sizing: border-box;
+    padding: 32px;
+}
+
+/* STEP 5 — Add box-shadow (depth) */
+/*
+  On .panel--shadow, add a box-shadow (subtle but visible).
+  Confirm: shadow does not change layout spacing.
+*/
+
+.panel--shadow {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
+}
+
+/*
+  ✅ FINAL CHECKLIST
+  - Can you point to content/padding/border/margin on your boxes?
+  - Did you test changing padding and border thickness?
+  - Did you test box-sizing: border-box?
+  - Did you add box-shadow and confirm it doesn't change layout spacing?
+*/
