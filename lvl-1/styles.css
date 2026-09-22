@@ -1,8 +1,141 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Archivo', sans-serif;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height: 200vh;
+}
+
+/* NAVBAR */
+
+.nav-container {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    padding: 12px;
+    background-color: #adb5bd;
+    opacity: 50%;
+    position: sticky;
+    top: 0;
+}
+
+.nav-container h1 a {
+    text-decoration: none;
+    color: #343a40;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.nav-container h1 a:hover {
+    color: #e9ecef;
+}
+
+.nav-btns-left {
+    place-content: center;
+}
+
+.nav-btns-left button {
+    margin: 0 12px;
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+}
+
+.nav-btns-left button:hover {
+    color: #e9ecef;
+}
+
+/* .nav-btns-right {}
+
+*/
+
+/* dropdown left */
+.dropbtn-left {
+    padding: 8px;
+    border: none;
+}
+
+.dropdown-left {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content-left {
+    display: none;
+    position: absolute;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+
+.dropdown-content-left a {
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    display: block;
+}
+
+/* dropdown right */
+.dropbtn-img {
+    background-color: #ede7e3;
+    width: 32px;
+    height: 32px;
+    border: none;
+}
+
+.dropdown-right {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-content {
+    display: none;
+    position: absolute;
+    background-color: #e6ccb2;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+.profile-content a {
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    display: block;
+}
+
+
+/* NAVBAR HOVER */
+.dropdown-content-left a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-left:hover .dropdown-content-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 28px;
+    padding: 12px;
+    width: 600%;
+}
+
+/* .dropdown-left:hover .dropbtn-left {} */
+
+.profile-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-right:hover .profile-content {
+    display: block;
+    padding: 8px;
+}
+
+.dropdown-right:hover .dropbtn-img {
+    background-color: #b08968;
 }
