@@ -117,9 +117,11 @@ body {
     z-index: 2;
 }
 
+
+
 .dropdown-content-left a {
     text-decoration: none;
-    color: black;
+    color: #dee2e6;
     padding: 8px;
     display: block;
     width: fit-content;
@@ -134,7 +136,6 @@ body {
 }
 
 .dropdown-right {
-    /* max-width: 15%; */
     position: relative;
     display: inline-block;
 }
@@ -171,7 +172,8 @@ body {
 .dropdown-left:hover .dropdown-content-left {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #dee2e6;
+    /* background-color: #dee2e6; */
+    background-color: #343a40;
     /* margin-top: 28px; */
     padding: 12px;
     width: 400%;
@@ -200,7 +202,7 @@ body {
     background-color: #343a40;
     color: #adb5bd;
     padding: 8px 28px;
-    transform: translate(-90px);
+    transform: translate(-45px);
 }
 
 #profile-name {
