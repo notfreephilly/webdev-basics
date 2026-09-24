@@ -396,4 +396,5 @@ body {
     overflow: scroll;
     white-space: nowrap;
     padding: 10px;
+    scrollbar-width: none;
 }
